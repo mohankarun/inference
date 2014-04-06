@@ -1,0 +1,585 @@
+
+
+Started GET "/admin/console" for 127.0.0.1 at 2014-04-06 22:48:02 +1000
+Processing by AdminController#console as HTML
+  Rendered admin/console.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 751ms (Views: 723.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-06 22:48:03 +1000
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-04-06 22:48:03 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-06 22:48:03 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-06 22:48:03 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-06 22:48:03 +1000
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-04-06 22:48:03 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-06 22:48:03 +1000
+
+
+Started GET "/admin/console" for 127.0.0.1 at 2014-04-06 22:54:48 +1000
+Processing by AdminController#console as HTML
+  Rendered admin/console.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-06 22:54:48 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-06 22:54:48 +1000
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-04-06 22:54:48 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-06 22:54:48 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-06 22:54:48 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-06 22:54:48 +1000
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-04-06 22:54:48 +1000
+
+
+Started GET "/admin/console" for 127.0.0.1 at 2014-04-06 22:56:46 +1000
+Processing by AdminController#console as HTML
+  Rendered admin/console.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-06 22:56:46 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-06 22:56:46 +1000
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-04-06 22:56:46 +1000
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-04-06 22:56:46 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-06 22:56:46 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-06 22:56:46 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-06 22:56:46 +1000
+
+
+Started GET "/admin/console" for 127.0.0.1 at 2014-04-06 22:57:17 +1000
+Processing by AdminController#console as HTML
+  Rendered admin/console.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-06 22:57:17 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-06 22:57:17 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-06 22:57:17 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-06 22:57:17 +1000
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-04-06 22:57:17 +1000
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-04-06 22:57:17 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-06 22:57:17 +1000
+
+
+Started GET "/admin/console" for 127.0.0.1 at 2014-04-06 23:00:03 +1000
+Processing by AdminController#console as HTML
+  Rendered admin/console.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (couldn't find file 'bootstrap.min'
+  (in /home/rubydev/rails/inference/app/assets/stylesheets/application.css:13)):
+    2: <html>
+    3: <head>
+    4:   <title>Inference</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__2734751591178657616_70346754253640'
+
+
+  Rendered /home/rubydev/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /home/rubydev/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (43.0ms)
+  Rendered /home/rubydev/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (58.0ms)
+
+
+Started GET "/admin/console" for 127.0.0.1 at 2014-04-06 23:00:47 +1000
+Processing by AdminController#console as HTML
+  Rendered admin/console.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 104ms (Views: 102.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-06 23:00:47 +1000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-06 23:00:47 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-06 23:00:47 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-06 23:00:47 +1000
+
+
+Started GET "/assets/bootstrap/bootstrap.css?body=1" for 127.0.0.1 at 2014-04-06 23:00:47 +1000
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-04-06 23:00:47 +1000
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-04-06 23:00:47 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-06 23:00:47 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-06 23:00:47 +1000
+
+
+Started GET "/admin/console" for 127.0.0.1 at 2014-04-06 23:01:04 +1000
+Processing by AdminController#console as HTML
+  Rendered admin/console.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 69ms (Views: 68.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-06 23:01:04 +1000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-06 23:01:04 +1000
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-04-06 23:01:04 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-06 23:01:04 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-06 23:01:04 +1000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-06 23:01:04 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-06 23:01:04 +1000
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-04-06 23:01:04 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-06 23:01:04 +1000
+
+
+Started GET "/admin/console" for 127.0.0.1 at 2014-04-06 23:02:48 +1000
+Processing by AdminController#console as HTML
+  Rendered admin/console.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-06 23:02:48 +1000
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-04-06 23:02:48 +1000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-06 23:02:48 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-06 23:02:48 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-06 23:02:48 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-06 23:02:48 +1000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-06 23:02:48 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-06 23:02:48 +1000
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-04-06 23:02:48 +1000
+
+
+Started GET "/admin/console" for 127.0.0.1 at 2014-04-06 23:03:02 +1000
+Processing by AdminController#console as HTML
+  Rendered admin/console.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-06 23:03:02 +1000
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-04-06 23:03:02 +1000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-06 23:03:02 +1000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-06 23:03:02 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-06 23:03:02 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-06 23:03:02 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-06 23:03:02 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-06 23:03:02 +1000
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-04-06 23:03:02 +1000
+
+
+Started GET "/admin/console" for 127.0.0.1 at 2014-04-06 23:03:45 +1000
+Processing by AdminController#console as HTML
+  Rendered admin/console.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-06 23:03:45 +1000
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-04-06 23:03:45 +1000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-06 23:03:45 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-06 23:03:45 +1000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-06 23:03:45 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-06 23:03:45 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-06 23:03:45 +1000
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-04-06 23:03:45 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-06 23:03:45 +1000
+
+
+Started GET "/admin/console" for 127.0.0.1 at 2014-04-06 23:04:12 +1000
+Processing by AdminController#console as HTML
+  Rendered admin/console.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-06 23:04:12 +1000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-06 23:04:12 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-06 23:04:12 +1000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-06 23:04:12 +1000
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-04-06 23:04:12 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-06 23:04:12 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-06 23:04:12 +1000
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-04-06 23:04:12 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-06 23:04:12 +1000
+
+
+Started GET "/admin/console" for 127.0.0.1 at 2014-04-06 23:04:38 +1000
+Processing by AdminController#console as HTML
+  Rendered admin/console.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-06 23:04:38 +1000
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-04-06 23:04:38 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-06 23:04:38 +1000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-06 23:04:38 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-06 23:04:38 +1000
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-04-06 23:04:38 +1000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-06 23:04:38 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-06 23:04:38 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-06 23:04:38 +1000
+
+
+Started GET "/admin/console" for 127.0.0.1 at 2014-04-06 23:05:04 +1000
+Processing by AdminController#console as HTML
+  Rendered admin/console.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-06 23:05:05 +1000
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-04-06 23:05:05 +1000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-06 23:05:05 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-06 23:05:05 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-06 23:05:05 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-06 23:05:05 +1000
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-04-06 23:05:05 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-06 23:05:05 +1000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-06 23:05:05 +1000
+
+
+Started GET "/admin/console" for 127.0.0.1 at 2014-04-06 23:05:30 +1000
+Processing by AdminController#console as HTML
+  Rendered admin/console.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-06 23:05:30 +1000
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-04-06 23:05:30 +1000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-06 23:05:30 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-06 23:05:30 +1000
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-04-06 23:05:30 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-06 23:05:30 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-06 23:05:30 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-06 23:05:30 +1000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-06 23:05:30 +1000
+
+
+Started GET "/admin/console" for 127.0.0.1 at 2014-04-06 23:07:22 +1000
+Processing by AdminController#console as HTML
+  Rendered admin/_nav.html.erb (0.5ms)
+  Rendered admin/console.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-06 23:07:22 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-06 23:07:22 +1000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-06 23:07:22 +1000
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-04-06 23:07:22 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-06 23:07:22 +1000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-06 23:07:22 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-06 23:07:22 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-06 23:07:22 +1000
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-04-06 23:07:22 +1000
+
+
+Started GET "/admin/console" for 127.0.0.1 at 2014-04-06 23:08:06 +1000
+Processing by AdminController#console as HTML
+  Rendered admin/_nav.html.erb (0.1ms)
+  Rendered admin/console.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-06 23:08:06 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-06 23:08:07 +1000
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-04-06 23:08:07 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-06 23:08:07 +1000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-06 23:08:07 +1000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-06 23:08:07 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-06 23:08:07 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-06 23:08:07 +1000
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-04-06 23:08:07 +1000
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-06 23:14:54 +1000
+Processing by AdminController#console as HTML
+  Rendered admin/_nav.html.erb (0.1ms)
+  Rendered admin/console.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-06 23:14:54 +1000
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-04-06 23:14:54 +1000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-06 23:14:54 +1000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-06 23:14:54 +1000
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-04-06 23:14:54 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-06 23:14:54 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-06 23:14:54 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-06 23:14:54 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-06 23:14:54 +1000
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-06 23:15:48 +1000
+Processing by AdminController#console as HTML
+  Rendered admin/_nav.html.erb (0.1ms)
+  Rendered admin/console.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    2: 
+    3: <body>
+    4: <%=render 'nav'%>
+    5: <%= form_for @post do |f| %>
+    6:   <% if @post.errors.any? %>
+    7:   <div id="error_explanation">
+    8:     <h2><%= pluralize(@post.errors.count, "error") %> prohibited
+  app/views/admin/console.html.erb:5:in `_app_views_admin_console_html_erb___1953338411620143634_70346497717000'
+
+
+  Rendered /home/rubydev/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (47.0ms)
+  Rendered /home/rubydev/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /home/rubydev/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (60.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-06 23:16:40 +1000
+Processing by AdminController#console as HTML
+  Rendered admin/_nav.html.erb (0.1ms)
+  Rendered admin/console.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-06 23:16:41 +1000
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-06 23:16:41 +1000
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-04-06 23:16:41 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-06 23:16:41 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-06 23:16:41 +1000
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-06 23:16:41 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-06 23:16:41 +1000
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-04-06 23:16:41 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-06 23:16:41 +1000
