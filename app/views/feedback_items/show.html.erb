@@ -1,0 +1,16 @@
+<%= render 'admin/nav'%>
+<p id="notice"><%= notice %></p>
+	
+<div class='container'>
+<div class=" feedback-item <%= @feedback_item.theme %>-theme">
+<img class='<%= @feedback_item.start %>'/>
+	<h3><%= @feedback_item.title %></h3>
+    <p><%= @feedback_item.description %></p>
+    <input id="input-21" type="number" class="rating" min="10" max="29" step="2" style="display: none;">
+</div>
+	<br>
+	<br>
+
+<%= link_to 'Edit', edit_feedback_item_path(@feedback_item) , { :class=>"btn btn-primary" }%> 
+<%= link_to 'Back', feedback_items_path ,  { :class=>"btn btn-primary" } %>
+</div>

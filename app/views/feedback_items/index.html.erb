@@ -1,0 +1,37 @@
+<%= render 'admin/nav' %>	
+<div class="container">
+<h1>Current FeedBack Items</h1>
+<%= link_to 'New Feedback item', new_feedback_item_path , { :class=>"btn btn-primary" } %>
+<br>
+<br>
+<hr>
+<div class="table-responsive">
+<table class="table table-bordered">
+  <thead>
+	<tr class="row">
+      <th>Title</th>
+      <th>Description</th>
+      <th>Theme</th>
+      <th>Start</th>
+      <th colspan=3> Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @feedback_items.each do |feedback_item| %>
+      <tr class="row">
+        <td><%= feedback_item.title %></td>
+        <td><%= feedback_item.description %></td>
+        <td><%= feedback_item.theme %></td>
+        <td><%= feedback_item.start %></td>
+        <td><%= link_to 'Show', feedback_item , { :class=>"btn btn-primary" }%></td>
+        <td><%= link_to 'Edit', edit_feedback_item_path(feedback_item) , { :class=>"btn btn-primary" }%></td>
+        <td><%= link_to 'Destroy', feedback_item, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-primary" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+<br>
+
+
