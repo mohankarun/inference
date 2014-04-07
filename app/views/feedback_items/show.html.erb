@@ -3,10 +3,10 @@
 	
 <div class='container'>
 <div class=" feedback-item <%= @feedback_item.theme %>-theme">
-<img class='<%= @feedback_item.start %>'/>
+<%= image_tag "happy.gif"  %>	
 	<h3><%= @feedback_item.title %></h3>
     <p><%= @feedback_item.description %></p>
-    <input id="input-21" type="number" class="rating" min="10" max="29" step="2" style="display: none;">
+    <input id="input-21" type="number" class="rating" min="0" max="5" step="1" style="display: none;">
 </div>
 	<br>
 	<br>
