@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap.min
-//= require star-rating.min
+//= require jquery.rating.pack
 //= require turbolinks
 //= require_tree .
+

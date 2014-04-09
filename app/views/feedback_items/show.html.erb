@@ -2,15 +2,71 @@
 <p id="notice"><%= notice %></p>
 	
 <div class='container'>
-<div class=" feedback-item <%= @feedback_item.theme %>-theme">
-<%= image_tag "happy.gif"  %>	
-	<h3><%= @feedback_item.title %></h3>
+	<div id ='<%= @feedback_item.id	 %>' class='feedback <%= @feedback_item.theme %>' data-theme='<%= @feedback_item.theme %>' >
+<div id="container">
+        <div id="card" class="<%= @feedback_item.theme %> card show-front" >
+            <div id="front" class="front face">
+            <img src="/assets/<%= @feedback_item.theme %>-happy.gif"/>
+            </div>
+            <div id="right" class="right face">
+            <img src="/assets/<%= @feedback_item.theme %>-ok.gif"/>
+            </div>
+            <div id="back" class="back face">
+			<img src="/assets/<%= @feedback_item.theme %>-sad.gif"/>
+            </div>
+        </div>
+    </div>
+   <h3><%= @feedback_item.title %></h3>
     <p><%= @feedback_item.description %></p>
-    <input id="input-21" type="number" class="rating" min="0" max="5" step="1" style="display: none;">
+<input name="<%= @feedback_item.id %>"  value=1 type="radio" class="star {split:2}"/> 
+<input name="<%= @feedback_item.id %>"  value=2 type="radio" class="star {split:2}"/>
+<input name="<%= @feedback_item.id %>"  value=3 type="radio" class="star {split:2}"/>
+<input name="<%= @feedback_item.id %>"  value=4  type="radio" class="star {split:2}"/>
+<input name="<%= @feedback_item.id %>""  value=5 type="radio" class="star {split:2}"/>
 </div>
-	<br>
-	<br>
 
+
+
+<br><br>
 <%= link_to 'Edit', edit_feedback_item_path(@feedback_item) , { :class=>"btn btn-primary" }%> 
 <%= link_to 'Back', feedback_items_path ,  { :class=>"btn btn-primary" } %>
 </div>
+
+<script>
+$('.star').rating({ callback: function(value, link){ 
+   var id  = $(link).parent().parent().parent().attr('id');
+
+
+
+   var themeselect= '#'+id;
+    if(value!='undefined')
+    {
+      value=parseInt(value);
+      if(value <3)
+        $(themeselect+' .card').attr('class', 'card show-back');
+      else if (value <=3)
+        $(themeselect+' .card').attr('class', 'card show-right');
+      else {
+        $(themeselect+' .card').attr('class', 'card show-front');
+
+        }
+
+    }
+
+
+   } });
+    function flip(event)
+{
+           var element = event.currentTarget;
+
+    var targetClassName = element.className;
+
+    
+    if(targetClassName == 'card show-front')
+        element.className = 'card show-right';
+    else if(targetClassName == 'card show-right')
+        element.className = 'card show-back';
+    else if(targetClassName == 'card show-back')
+        element.className = 'card show-front';         
+}
+</script>
