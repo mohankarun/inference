@@ -21,7 +21,7 @@ width: 100%;
 background: #000;
 border-radius: 6px;
 color: grey;
-padding: 30px 10px;
+padding: 10px 10px 30px;
 font-size: 18px;
     }
 .feedback img{
@@ -39,12 +39,33 @@ background-color: #E90404;
     }
 
 .feedback.emmet{
-color:white;
-background-color: #0053CF	;
+color: rgba(226, 220, 220, 0.96);
+background-color: #EE4F05;
     }
+.feedback.spaceguy{
+color: rgba(228, 241, 241, 0.96);
+background-color: #057EEE;
+    }    
+
+.feedback.president-business{
+color: rgba(248, 247, 237, 0.96);
+background-color: #9B0303;
+    }        
+
+.feedback.unikitty{
+color: rgba(243, 243, 240, 0.96);
+background-color: #CC08A5;
+    }        
+.feedback.cop{
+color: rgba(3, 3, 3, 0.96);
+background-color: #F0E7EE;
+border: 1px solid rgb(195, 195, 156);
+    }      
     
     
-    
+table td{
+max-width:400px    
+    }
 
 body 
 {
