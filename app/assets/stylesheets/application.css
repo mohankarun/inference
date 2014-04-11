@@ -13,7 +13,9 @@
  *= require bootstrap/bootstrap.min
  * *= require bootstrap/jquery.rating
  */
-
+table td{
+word-wrap:break-word;
+}
 .feedback{
 display: block;
 height: 0 auto;
@@ -23,6 +25,7 @@ border-radius: 6px;
 color: grey;
 padding: 10px 10px 30px;
 font-size: 18px;
+word-wrap:break-word;
     }
 .feedback img{
 border-radius:10px;
@@ -35,7 +38,7 @@ background-color: #000;
 
 .feedback.wildstyle{
 color:white;
-background-color: #E90404;
+background-color: #B106F3;
     }
 
 .feedback.emmet{
@@ -43,8 +46,8 @@ color: rgba(226, 220, 220, 0.96);
 background-color: #EE4F05;
     }
 .feedback.spaceguy{
-color: rgba(228, 241, 241, 0.96);
-background-color: #057EEE;
+color: rgba(27, 29, 29, 0.90);
+background-color: #399BF5;
     }    
 
 .feedback.president-business{

@@ -1,0 +1,89 @@
+<%=render 'admin/nav'%>
+<div class='container'>
+<% @feedback_items.each do |feedback_item| %>
+
+	<div id ='<%=feedback_item.id%>' class='col-lg-6 feedback <%=feedback_item.theme %>' data-theme='<%=feedback_item.theme %>' >
+	
+	<div id="container" class=''>
+			<div id="card" class="<%=feedback_item.theme %> card show-front" >
+				<div id="front" class="front face">
+				<img src="/assets/<%=feedback_item.theme %>-happy.gif"/>
+				</div>
+				<div id="right" class="right face">
+				<img src="/assets/<%=feedback_item.theme %>-ok.gif"/>
+				</div>
+				<div id="back" class="back face">
+				<img src="/assets/<%=feedback_item.theme %>-sad.gif"/>
+				</div>
+			</div>
+		</div>
+	   <h3><%=feedback_item.title %></h3>
+		<p><%=feedback_item.description %></p>
+	<input name="<%=feedback_item.id %>"  value=1 type="radio" class="star {split:2}"/> 
+	<input name="<%=feedback_item.id %>"  value=2 type="radio" class="star {split:2}"/>
+	<input name="<%=feedback_item.id %>"  value=3 type="radio" class="star {split:2}"/>
+	<input name="<%=feedback_item.id %>"  value=4  type="radio" class="star {split:2}"/>
+	<input name="<%=feedback_item.id %>""  value=5 type="radio" class="star {split:2}"/>
+	</div>
+<%end%>
+
+
+<script>
+$('.star').rating({ callback: function(value, link){ 
+   var id  = $(link).parent().parent().parent().attr('id');
+   var themeselect= '#'+id;
+   var inp_select= '#input-'+id;
+    if(value!='undefined')
+    {
+      value=parseInt(value);
+      $(inp_select).val(value);
+      if(value <3)
+        $(themeselect+' .card').attr('class', 'card show-back');
+      else if (value <=3)
+        $(themeselect+' .card').attr('class', 'card show-right');
+      else {
+        $(themeselect+' .card').attr('class', 'card show-front');
+
+        }
+
+    }
+
+
+   } });
+    function flip(event)
+{
+           var element = event.currentTarget;
+
+    var targetClassName = element.className;
+
+    
+    if(targetClassName == 'card show-front')
+        element.className = 'card show-right';
+    else if(targetClassName == 'card show-right')
+        element.className = 'card show-back';
+    else if(targetClassName == 'card show-back')
+        element.className = 'card show-front';         
+}
+
+$(function() // execute once the DOM has loaded
+{
+$('#feedbackSubmit').click(function(event){
+event.preventDefault();
+if(confirm('Do you want to Finish this Session?'))
+$('form[name=feedbacks]').submit();
+});
+});
+
+
+</script>
+<br><br>
+<input name="next" type="button"  class='btn btn-primary'value="Next >" />
+<br><hr>
+<%= form_tag("/session/end",name:'feedbacks', method: "post") do %>
+<% @feedback_items.each do |feedback_item| %>
+<input type='hidden' id='input-<%=feedback_item.id%>'name='feed<%=feedback_item.id%>' value=0></input>
+<%end%>
+<input id='feedbackSubmit'name="commit" type="submit"  class='btn btn-primary'value="Finish" />
+<%end%>
+
+</div>

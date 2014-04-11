@@ -1,0 +1,12 @@
+<%=render 'admin/nav'%>
+<div class='container'>
+<% @feedback_items.each do |feedback_item| %>
+	<div id ='<%=feedback_item.id%>' class='col-lg-6 feedback <%=feedback_item.theme %>' data-theme='<%=feedback_item.theme %>' >
+		<span class='score'><%=@scores[feedback_item.id.to_s]%></span>
+	   <h3><%=feedback_item.title %></h3>
+		<p><%=feedback_item.description %></p>
+	
+	</div>
+	
+<%end%>
+</div>

@@ -10,6 +10,9 @@ Inference::Application.routes.draw do
   
   get 'admin/console'
   
+  get 'session/start'
+  post 'session/end'
+  
   root 'admin#console'
 
   # Example of regular route:
