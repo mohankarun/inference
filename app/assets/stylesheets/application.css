@@ -35,6 +35,15 @@ border-radius:10px;
 color :yellow;
 background-color: #000;
     }
+.feedback.buttons{    
+background-color: white;
+color: #666;
+border: 2px solid gray;
+margin: 5px;
+width: 100%;
+padding:10px;
+}
+    
 
 .feedback.wildstyle{
 color:white;
@@ -241,3 +250,21 @@ body
     }
 
 
+#feedbackSubmit{
+position: absolute;
+bottom: 0;
+left:0;
+border:0;
+height:100%;
+opacity:0.4;}
+#feedbackNext{
+position: absolute;
+bottom: 0;
+right:0;
+border:0;
+height:100%;
+opacity:0.4;}
+.votedisplay{
+text-align: center;
+font-size: 30px
+}

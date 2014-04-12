@@ -19,12 +19,12 @@
 		</div>
 	   <h3><%=feedback_item.title %></h3>
 		<p><%=feedback_item.description %></p>
-	<input name="<%=feedback_item.id %>"  value=1 type="radio" class="star {split:2}"/> 
-	<input name="<%=feedback_item.id %>"  value=2 type="radio" class="star {split:2}"/>
-	<input name="<%=feedback_item.id %>"  value=3 type="radio" class="star {split:2}"/>
-	<input name="<%=feedback_item.id %>"  value=4  type="radio" class="star {split:2}"/>
-	<input name="<%=feedback_item.id %>""  value=5 type="radio" class="star {split:2}"/>
-	</div>
+	<input name="<%=feedback_item.id %>"  value=1 type="radio" class="star {split:1}"/> 
+	<input name="<%=feedback_item.id %>"  value=2 type="radio" class="star {split:1}"/>
+	<input name="<%=feedback_item.id %>"  value=3 type="radio" class="star {split:1}"/>
+	<input name="<%=feedback_item.id %>"  value=4  type="radio" class="star {split:1}"/>
+	<input name="<%=feedback_item.id %>""  value=5 type="radio" class="star {split:1}"/>
+</div>
 <%end%>
 
 
@@ -32,7 +32,7 @@
 $('.star').rating({ callback: function(value, link){ 
    var id  = $(link).parent().parent().parent().attr('id');
    var themeselect= '#'+id;
-   var inp_select= '#input-'+id;
+   var inp_select= 'form[name=temp] #input-'+id;
     if(value!='undefined')
     {
       value=parseInt(value);
@@ -44,8 +44,7 @@ $('.star').rating({ callback: function(value, link){
       else {
         $(themeselect+' .card').attr('class', 'card show-front');
 
-        }
-
+    }
     }
 
 
@@ -67,23 +66,68 @@ $('.star').rating({ callback: function(value, link){
 
 $(function() // execute once the DOM has loaded
 {
+var votes=0;
+$('form[name=temp] input').each(function(){
+if(this.id != "")
+this.value=0;
+});
+$('form[name=feedbacks] input').each(function(){
+if(this.id != "" & this.type!='submit')
+this.value=0;
+});
+
 $('#feedbackSubmit').click(function(event){
 event.preventDefault();
 if(confirm('Do you want to Finish this Session?'))
 $('form[name=feedbacks]').submit();
 });
+
+
+$('#feedbackNext').click(function(event){
+event.preventDefault();
+votes+=1;
+$('form[name=temp] input').each(function(){
+	if(this.id != "")
+	{
+		var current_average =$('form[name=feedbacks] input#'+this.id).val();
+		current_average=parseInt(current_average, 10);
+		var rating=parseInt(this.value)
+		var new_average = (current_average + rating)/votes;
+		new_average =parseInt(new_average, 10);
+		$('form[name=feedbacks] input#'+this.id).val(new_average);
+	}	
+ });
+ 
+$('.star').rating('select',0); 
+$('#totvotes').html(votes);
+ 
 });
 
 
+});
+
+
+
+
+
 </script>
-<br><br>
-<input name="next" type="button"  class='btn btn-primary'value="Next >" />
-<br><hr>
+
+<div class='col-lg-12 feedback buttons'>
+<div class='votedisplay'>
+	Total Votes : <span id='totvotes'>0</span>
+</div>
+<input name="next" id='feedbackNext'type="button"  class='btn btn-primary'value=" Next >"/>
+<%= form_tag("#",name:'temp', method: "post") do %>
+<% @feedback_items.each do |feedback_item| %>
+<input type='hidden' id='input-<%=feedback_item.id%>'name='feed<%=feedback_item.id%>' value=0></input>
+<%end%>
+<%end%>
 <%= form_tag("/session/end",name:'feedbacks', method: "post") do %>
 <% @feedback_items.each do |feedback_item| %>
 <input type='hidden' id='input-<%=feedback_item.id%>'name='feed<%=feedback_item.id%>' value=0></input>
 <%end%>
-<input id='feedbackSubmit'name="commit" type="submit"  class='btn btn-primary'value="Finish" />
+<input id='feedbackSubmit'name="commit" type="submit"  class='btn btn-primary'value=" Finish " />
 <%end%>
+</div>
 
 </div>
