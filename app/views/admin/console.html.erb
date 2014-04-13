@@ -3,6 +3,13 @@
 <body>
 <%=render 'nav'%>
 
+<div class='main'>
+	<h1>
+	Welcome to Inference !</h1>
+
+<%= link_to 'Configure Feedbacks', '/feedback_items' , { :class=>"btn btn-primary" }%> 
+<%= link_to 'Start a Session','/session/start' , { :class=>"btn btn-primary" }%> 
+</div>
 
 </body>
 </html>
