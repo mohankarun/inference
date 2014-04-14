@@ -152,6 +152,14 @@ width: 30%;
 
 #feedbackNext{
 float:right;
+position: relative;
+bottom: 15px;
+}
+#feedbackSubmit{
+float:left;
+position: relative;
+bottom: 15px;
+
 }
 
 a {
@@ -161,4 +169,8 @@ color:black;
 .buttons{
 text-align:center;
 font-size:28px
+}
+
+.votedisplay{
+font-size: 14px;
 }
