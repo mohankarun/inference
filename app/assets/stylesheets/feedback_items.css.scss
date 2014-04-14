@@ -19,3 +19,146 @@ width:100px;
 background:black;
 color:white;
 }
+
+.link-new-icon{
+float: left;
+margin-top: -5px
+}
+
+.link-start{
+float: right;
+margin-top: -5px
+}
+.link-start-icon{
+margin-bottom: -10px;
+}
+
+.icon{
+padding:5px
+}
+.icon.delete{
+padding:0px;
+}
+
+
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: rgba(218, 216, 216, 0.56); 
+}
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border-bottom: 1px solid #ccc; 
+  text-align: center; 
+}
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Title"; }
+	td:nth-of-type(2):before { content: "Description"; }
+	td:nth-of-type(3):before { content: "Theme"; }
+	td:nth-of-type(4):before { content: "Start"; }
+	td:nth-of-type(5):before { content: "Actions"; }
+}
+
+.link-new{
+text-decoration:none;
+color:black;
+}
+.form-group input{
+border: 1px solid #666;
+height: 30px;
+width:50%;
+color: rgb(114, 114, 121);
+padding: 8px;
+border-radius: 3px;}
+
+.form-group textarea{
+border: 1px solid #666;
+color: rgb(114, 114, 121);
+padding: 5px;
+border-radius: 3px;
+width:50%;
+}
+
+
+.form-group select{
+border: 1px solid #666;
+height: 30px;
+color: rgb(114, 114, 121);
+padding: 5px;
+border-radius: 3px;
+width:50%;}
+
+input[type="submit"],#feedbackNext
+{
+  background: transparent;
+height: 40px;
+border-radius: 5px;
+font-weight: bolder;
+cursor: pointer;
+width: 30%;
+}
+
+#feedbackNext{
+float:right;
+}
+
+a {
+text-decoration:none;
+color:black;
+}
+.buttons{
+text-align:center;
+font-size:28px
+}

@@ -1,15 +1,63 @@
 <html>
 
 <body>
-<%=render 'nav'%>
 
-<div class='main'>
-	<h1>
-	Welcome to Inference !</h1>
 
-<%= link_to 'Configure Feedbacks', '/feedback_items' , { :class=>"btn btn-primary" }%> 
-<%= link_to 'Start a Session','/session/start' , { :class=>"btn btn-primary" }%> 
-</div>
+
+		<div class="grid grid-pad">
+			<div class="col-1-2">
+					<div class="content">
+						<h1>INFERENCE</h1>
+						<p>Inference was created for small teams to get instantaneous feeedbacks.Each feedback item is configurable and customizable. Themes are put together from the characters based on 'The Lego Movie'. It utilizes opensource frameworks like simplegrid responsive layout , jQuery , Ruby on Rails etc. </p>
+						<p>This is a simplistic tool determining the team health and direction.</p>
+					</div>	
+			</div>
+			<div class="grid grid-pad">
+				<div class="col-1-1">
+				<div class="content heading">
+					We can begin by 
+				</div>
+			</div>
+		</div>					
+		<div class="grid grid-pad">
+			<div class="col-1-4">
+				<div class="content options">
+					<!--Empty PlaceHolder-->
+				</div>
+			</div>	
+					
+			<div class="col-1-4">
+				<a href='/feedback_items' class='flat-off'>
+				<div class="content options display">
+					<img src='/assets/configure.png' height='64' width='64'/>
+					<h3>Configuring the feedback items</h3>
+					</a>
+				</div>
+			</div>
+			<div class="col-1-4 no-border">
+				<a href='/session/start' class='flat-off'>
+				<div class="content options display">
+					<img src='/assets/start-session.png' height='64' width='64'/>
+					<h3>Starting a new feedback session</h3>
+				</div>
+				</a>
+			</div>
+			<div class="col-1-4">
+				<div class="content options">
+					<!--Empty PlaceHolder-->
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="grid grid-pad">
+				<div class="col-1-1">
+				<div class="content tip">
+				(Click one of the above )
+				</div>
+			</div>
+		</div>
+
+
 
 </body>
 </html>

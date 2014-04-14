@@ -1,7 +1,24 @@
-<%= render 'admin/nav' %>	
-<div class="container">
+
+
+<div class="grid grid-pad">
+			<div class="col-1-1">
+					<div class="content heading">
 <h1>Current FeedBack Items</h1>
-<%= link_to 'New Feedback item', new_feedback_item_path , { :class=>"btn btn-primary" } %>
+</div>
+</div>
+	<div class="col-1-1">
+	<div class="content">
+	<%= link_to new_feedback_item_path ,class:'link-new' do %>
+	<img src='assets/new.png' height='32' width='32' class='link-new-icon'/>
+	Add New
+<%end%>
+
+	<%= link_to session_start_path ,class:'link-start' do %>
+	<img src='assets/start-session.png' height='32' width='32' class='link-start-icon'/>
+	Start a Session
+<%end%>
+
+
 <br>
 <br>
 <hr>
@@ -23,9 +40,9 @@
         <td><%= feedback_item.description %></td>
         <td><%= feedback_item.theme %></td>
         <td><%= feedback_item.start %></td>
-        <td><%= link_to 'Show', feedback_item , { :class=>"btn btn-primary" }%></td>
-        <td><%= link_to 'Edit', edit_feedback_item_path(feedback_item) , { :class=>"btn btn-primary" }%></td>
-        <td><%= link_to 'Destroy', feedback_item, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-primary" %></td>
+        <td><%= link_to feedback_item , { :class=>"icon" } do%><img src='assets/show.png' height='22' width='22'/><%end%></td>
+        <td><%= link_to  edit_feedback_item_path(feedback_item) , { :class=>"icon" } do %><img src='assets/edit.png' height='22' width='22'/><%end%></td>
+        <td><%= link_to feedback_item, method: :delete, data: { confirm: 'Are you sure?' },class:"icon delete"  do %><img src='assets/delete.png' height='32' width='32'/>	<%end%></td>
       </tr>
     <% end %>
   </tbody>

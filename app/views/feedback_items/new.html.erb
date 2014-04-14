@@ -1,9 +1,11 @@
-<%= render 'admin/nav'%>
-
-<div class='container'>
+<div class="grid grid-pad">
+<div class="col-1-2">
+		<div class="content heading">
 <h1>New Feedback Item</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', feedback_items_path %>
+<%= link_to  feedback_items_path do%>
+<img src='/assets/back.png' height='48' width='48' class='icon'/><span>Back</span><%end%>
+</div>
 </div>

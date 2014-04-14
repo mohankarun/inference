@@ -1,8 +1,7 @@
-<%=render 'admin/nav'%>
-<div class='container'>
+<div class="grid grid-pad">
 <% @feedback_items.each do |feedback_item| %>
 
-	<div id ='<%=feedback_item.id%>' class='col-lg-6 feedback <%=feedback_item.theme %>' data-theme='<%=feedback_item.theme %>' >
+	<div id ='<%=feedback_item.id%>' class='col-1-2 feedback <%=feedback_item.theme %>' data-theme='<%=feedback_item.theme %>' >
 	
 	<div id="container" class=''>
 			<div id="card" class="<%=feedback_item.theme %> card show-front" >
@@ -112,7 +111,7 @@ $('#totvotes').html(votes);
 
 </script>
 
-<div class='col-lg-12 feedback buttons'>
+<div class='col-1-1 buttons'>
 <div class='votedisplay'>
 	Total Votes : <span id='totvotes'>0</span>
 </div>

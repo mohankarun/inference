@@ -2,13 +2,44 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.main{
-    position: absolute;
-top: 40%;
-left: 10%;
-width: 80%;
-height: 20%;
+
+
+body{
+background:url(page-background.jpg);
+}
+.heading{
+font-size: 30px;
+text-shadow: 1px 1px 1px #555;
 text-align: center;
-border: 1px solid;
-border-radius: 9px;
+border-top: 1px solid rgb(215, 216, 215);
+padding: 15px;
+}
+
+.options{
+min-height:80px;
+}
+.options.display{
+text-align:center;
+border-right:1px dotted;
+padding:10px;
+}
+
+@media handheld, only screen and (max-width: 767px){
+.options.display{
+border:none;
+}
+}
+
+.no-border .options {
+border:none;
+}
+
+a.flat-off{
+text-decoration: none;
+color: black;}
+
+.tip{
+font-size:10px;
+text-decoration:none;
+text-align:center;	
 }

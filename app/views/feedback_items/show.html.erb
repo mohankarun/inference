@@ -1,7 +1,6 @@
-<%= render 'admin/nav'%>
-<p id="notice"><%= notice %></p>
-	
-<div class='container'>
+<div class="grid grid-pad">
+<div class="col-1-1">
+		<div class="content heading">
 		<div id ='<%= @feedback_item.id%>' class='feedback <%= @feedback_item.theme %>' data-theme='<%= @feedback_item.theme %>' >
 	<div id="container">
 			<div id="card" class="<%= @feedback_item.theme %> card show-front" >
@@ -28,8 +27,12 @@
 
 
 	<br><br>
-<%= link_to 'Edit', edit_feedback_item_path(@feedback_item) , { :class=>"btn btn-primary" }%> 
-<%= link_to 'Back', feedback_items_path ,  { :class=>"btn btn-primary" } %>
+	<%= link_to  feedback_items_path do%>
+<img src='/assets/back.png' height='48' width='48' class='icon'/><span>Back to List </span><%end%>
+
+<%= link_to  edit_feedback_item_path(@feedback_item) , class:"icon" do %><img src='/assets/edit.png' height='48' width='48'/>Edit<%end%>
+
+</div>
 </div>
 
 <script>

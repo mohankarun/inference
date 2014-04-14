@@ -1,7 +1,13 @@
-<%= render 'admin/nav'%>
-<div class="container">
-<h1>Editing FeedBack Item</h1>
+<div class="grid grid-pad">
+<div class="col-1-2">
+		<div class="content heading">
+			<h1>Editing FeedBack Item</h1>
 <%= render 'form' %>
-<%= link_to 'Show', @feedback_item ,  { :class=>"btn btn-primary" } %> |
-<%= link_to 'Back', feedback_items_path , { :class=>"btn btn-primary" }	%>
+
+<%= link_to  feedback_items_path do%>
+<img src='/assets/back.png' height='48' width='48' class='icon'/><span>Back</span><%end%>
+<%= link_to  @feedback_item  do %>
+<img src='/assets/view.png' height='48' class='icon	' width='48'/><span>View</span><%end%>
+
+</div>			
 </div>
