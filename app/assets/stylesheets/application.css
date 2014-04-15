@@ -11,6 +11,7 @@
  *= require_self
  *= require_tree .
  *= require simplegrid/simplegrid
+ *= require bootstrap/jquery.rating
  */
  
  
@@ -22,7 +23,10 @@
 }
 body{
 font-family:'Arimo';
+background:url(page-background.jpg);
+background-repeat: no-repeat;
 }
+
  
 table td{
 word-wrap:break-word;
