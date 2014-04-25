@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .feedback .score{
 height: 80px;
-width: 80px;
+width: 100px;
 border: 5px double;
 float: right;
 font-size: 56px;
@@ -13,3 +13,10 @@ vertical-align: text-bottom;
 font-weight: bolder;
 }
 
+.feedback .source{
+	float: right;
+position: relative;
+top: 85px;
+right: -50px;
+display: block;
+}

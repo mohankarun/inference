@@ -63,6 +63,44 @@ $('.star').rating({ callback: function(value, link){
         element.className = 'card show-front';         
 }
 
+
+function weighted_average(comma_seperated,total_votes)
+{
+
+	var values=comma_seperated.split(',');
+	var counted=countin(values)[0];
+	var counts=countin(values)[1];
+	var numerator=0,denominator=total_votes;
+
+	for(var i=0;i<counted.length;i++){
+	var item=parseInt(counted[i]);
+	numerator=numerator+(item * counts[i]);
+	}
+
+	var average=numerator / denominator;
+	average = (average).toFixed(1);
+	return average;
+}
+
+function countin(arr) {
+    var a = [], b = [], prev;
+
+    arr.sort();
+    for ( var i = 0; i < arr.length; i++ ) {
+        if ( arr[i] !== prev ) {
+            a.push(arr[i]);
+            b.push(1);
+        } else {
+            b[b.length-1]++;
+        }
+        prev = arr[i];
+    }
+
+    return [a, b];
+}
+
+
+
 $(function() // execute once the DOM has loaded
 {
 var votes=0;
@@ -78,7 +116,14 @@ this.value=0;
 $('#feedbackSubmit').click(function(event){
 event.preventDefault();
 if(confirm('Do you want to Finish this Session?'))
+{
+	$('form[name=feedbacks] input').each(function(){
+		if(this.id != "" & this.type!='submit' & this.id.indexOf('combined')<0)
+		this.value=weighted_average(this.value,votes);
+	});
+
 $('form[name=feedbacks]').submit();
+}
 });
 
 
@@ -86,15 +131,20 @@ $('#feedbackNext').click(function(event){
 event.preventDefault();
 votes+=1;
 $('form[name=temp] input').each(function(){
-	if(this.id != "")
+	if(this.id != ""& this.type!='submit' & this.id.indexOf('combined')<0)
 	{
-		var current_average =$('form[name=feedbacks] input#'+this.id).val();
-		current_average=parseInt(current_average, 10);
+		var currentvalue =$('form[name=feedbacks] input#'+this.id).val();
 		var rating=parseInt(this.value)
-		var new_average = (current_average + rating)/votes;
-		new_average =parseInt(new_average, 10);
-		$('form[name=feedbacks] input#'+this.id).val(new_average);
-	}	
+		var newvalue=currentvalue+','+rating;
+		$('form[name=feedbacks] input#'+this.id).val(newvalue);
+		var combined_id=this.id.replace('input-' ,'');
+		combined_id='combined-'+combined_id;
+		console.log('combined_id '+combined_id);
+		$('form[name=feedbacks] input#'+combined_id).val(newvalue);
+			console.log($('form[name=feedbacks] input#'+combined_id).val());
+
+	}
+	
  });
  
 $('.star').rating('select',0); 
@@ -115,15 +165,19 @@ $('#totvotes').html(votes);
 <div class='votedisplay'>
 	Total Votes : <span id='totvotes'>0</span>
 </div>
-<input name="next" id='feedbackNext'type="button"  class='btn btn-primary'value=" Next >"/>
+<input name="next" id='feedbackNext'type="button"  class='btn btn-primary'value=" Next &gt;"/>
+
+
 <%= form_tag("#",name:'temp', method: "post") do %>
 <% @feedback_items.each do |feedback_item| %>
-<input type='hidden' id='input-<%=feedback_item.id%>'name='feed<%=feedback_item.id%>' value=0></input>
+<input type='hidden' id='input-<%=feedback_item.id%>'name='feed<%=feedback_item.id%>' value='0'>
+<input type='hidden' id='combined-<%=feedback_item.id%>'name='combined<%=feedback_item.id%>' value='0'>
 <%end%>
 <%end%>
 <%= form_tag("/session/end",name:'feedbacks', method: "post") do %>
 <% @feedback_items.each do |feedback_item| %>
-<input type='hidden' id='input-<%=feedback_item.id%>'name='feed<%=feedback_item.id%>' value=0></input>
+<input type='hidden' id='input-<%=feedback_item.id%>'name='feed<%=feedback_item.id%>' value='0'>
+<input type='hidden' id='combined-<%=feedback_item.id%>'name='combined<%=feedback_item.id%>' value='0'>
 <%end%>
 <input id='feedbackSubmit'name="commit" type="submit"  class='btn btn-primary'value=" Finish " />
 <%end%>
