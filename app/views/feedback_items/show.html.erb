@@ -3,15 +3,24 @@
 		<div class="content heading">
 		<div id ='<%= @feedback_item.id%>' class='feedback <%= @feedback_item.theme %>' data-theme='<%= @feedback_item.theme %>' >
 	<div id="container">
-			<div id="card" class="<%= @feedback_item.theme %> card show-front" >
+			<div id="card" class="<%= @feedback_item.theme %> card show-back" >
 				<div id="front" class="front face">
-				<img src="/assets/<%= @feedback_item.theme %>-happy.gif"/>
+				<% if  @feedback_item.start =='sad'%>
+				<img src="/assets/<%=@feedback_item.theme %>-happy.gif"/>
+				<% else%>
+				<img src="/assets/<%=@feedback_item.theme %>-sad.gif"/>
+				<%end%>
+
 				</div>
 				<div id="right" class="right face">
 				<img src="/assets/<%= @feedback_item.theme %>-ok.gif"/>
 				</div>
 				<div id="back" class="back face">
-				<img src="/assets/<%= @feedback_item.theme %>-sad.gif"/>
+				<% if  @feedback_item.start =='sad'%>
+				<img src="/assets/<%=@feedback_item.theme %>-sad.gif"/>
+				<% else%>
+				<img src="/assets/<%=@feedback_item.theme %>-happy.gif"/>
+				<%end%>
 				</div>
 			</div>
 		</div>

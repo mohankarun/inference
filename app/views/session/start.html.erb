@@ -1,18 +1,34 @@
 <div class="grid grid-pad">
+
+<div class='col-1-1 title'>
+
+Voting Session ! 
+</div>
+
+
 <% @feedback_items.each do |feedback_item| %>
 
 	<div id ='<%=feedback_item.id%>' class='col-1-2 feedback <%=feedback_item.theme %>' data-theme='<%=feedback_item.theme %>' >
 	
 	<div id="container" class=''>
-			<div id="card" class="<%=feedback_item.theme %> card show-front" >
+			<div id="card" class="<%=feedback_item.theme %> card show-back" >
 				<div id="front" class="front face">
+				<% if  feedback_item.start =='sad'%>
 				<img src="/assets/<%=feedback_item.theme %>-happy.gif"/>
+				<% else%>
+				<img src="/assets/<%=feedback_item.theme %>-sad.gif"/>
+				<%end%>
+				
 				</div>
 				<div id="right" class="right face">
 				<img src="/assets/<%=feedback_item.theme %>-ok.gif"/>
 				</div>
 				<div id="back" class="back face">
+				<% if  feedback_item.start =='sad'%>
 				<img src="/assets/<%=feedback_item.theme %>-sad.gif"/>
+				<% else%>
+				<img src="/assets/<%=feedback_item.theme %>-happy.gif"/>
+				<%end%>
 				</div>
 			</div>
 		</div>
@@ -22,7 +38,7 @@
 	<input name="<%=feedback_item.id %>"  value=2 type="radio" class="star {split:1}"/>
 	<input name="<%=feedback_item.id %>"  value=3 type="radio" class="star {split:1}"/>
 	<input name="<%=feedback_item.id %>"  value=4  type="radio" class="star {split:1}"/>
-	<input name="<%=feedback_item.id %>""  value=5 type="radio" class="star {split:1}"/>
+	<input name="<%=feedback_item.id %>"  value=5 type="radio" class="star {split:1}"/>
 </div>
 <%end%>
 
@@ -76,9 +92,11 @@ function weighted_average(comma_seperated,total_votes)
 	var item=parseInt(counted[i]);
 	numerator=numerator+(item * counts[i]);
 	}
-
-	var average=numerator / denominator;
+	var average=0;
+	if(denominator>0){
+	 average=numerator / denominator;
 	average = (average).toFixed(1);
+	}
 	return average;
 }
 
@@ -139,10 +157,8 @@ $('form[name=temp] input').each(function(){
 		$('form[name=feedbacks] input#'+this.id).val(newvalue);
 		var combined_id=this.id.replace('input-' ,'');
 		combined_id='combined-'+combined_id;
-		console.log('combined_id '+combined_id);
 		$('form[name=feedbacks] input#'+combined_id).val(newvalue);
-			console.log($('form[name=feedbacks] input#'+combined_id).val());
-
+			
 	}
 	
  });

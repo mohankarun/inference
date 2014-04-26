@@ -1,8 +1,14 @@
 <div class="grid grid-pad">
+
+<div class='col-1-1 title'>
+  Session Results 
+</div>
+
 <% @feedback_items.each do |feedback_item| %>
 	<div id ='<%=feedback_item.id%>' class='col-1-2 feedback <%=feedback_item.theme %>' data-theme='<%=feedback_item.theme %>' >
-		<span class='score'><%=@scores[feedback_item.id.to_s]%></span>
-		<span class='source'><%=@combined[feedback_item.id.to_s]%></span>
+		<div class='score'><%=@scores[feedback_item.id.to_s]%>
+		<div class='source'>Distribution : <%=@combined[feedback_item.id.to_s].sub('0,','')%></div></div>
+		
 	   <h3><%=feedback_item.title %></h3>
 		<p><%=feedback_item.description %></p>
 	
