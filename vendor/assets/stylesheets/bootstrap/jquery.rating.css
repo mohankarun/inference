@@ -3,7 +3,7 @@ div.rating-cancel,div.star-rating{float:left;width:32px;height:28px;text-indent:
 div.rating-cancel,div.rating-cancel a{background:url(delete.png) no-repeat 0 -32px}
 div.star-rating,div.star-rating a{background:url(star4.gif) no-repeat 0 0px;padding-top:2px;}
 div.star-rating,div.star-rating a:hover{background:blue;}
-
+div.rating-cancel{display: none !important;}
 div.rating-cancel a,div.star-rating a{display:block;width:32px;height:100%;background-position:0 0px;border:0}
 div.star-rating-on a{background-position:0 -35px!important}
 div.star-rating-hover a{background-position:0 -64px}
