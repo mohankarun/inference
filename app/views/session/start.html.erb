@@ -34,7 +34,7 @@ Voting Session !
 		</div>
 	   <h3><%=feedback_item.title %></h3>
 		<p><%=feedback_item.description %></p>
-	<input name="<%=feedback_item.id %>"  value=1 type="radio" class="star {split:1}"/> 
+	<input name="<%=feedback_item.id %>"  value=1 type="radio" class="star {split:1}" checked=true/> 
 	<input name="<%=feedback_item.id %>"  value=2 type="radio" class="star {split:1}"/>
 	<input name="<%=feedback_item.id %>"  value=3 type="radio" class="star {split:1}"/>
 	<input name="<%=feedback_item.id %>"  value=4  type="radio" class="star {split:1}"/>
@@ -124,7 +124,7 @@ $(function() // execute once the DOM has loaded
 var votes=0;
 $('form[name=temp] input').each(function(){
 if(this.id != "")
-this.value=0;
+this.value=1;
 });
 $('form[name=feedbacks] input').each(function(){
 if(this.id != "" & this.type!='submit')
@@ -133,11 +133,19 @@ this.value=0;
 
 $('#feedbackSubmit').click(function(event){
 event.preventDefault();
+if(votes<=0)
+{
+	alert("No Votes Registered !");
+	return;
+}
 if(confirm('Do you want to Finish this Session?'))
 {
+
 	$('form[name=feedbacks] input').each(function(){
 		if(this.id != "" & this.type!='submit' & this.id.indexOf('combined')<0)
+		{
 		this.value=weighted_average(this.value,votes);
+		}
 	});
 
 $('form[name=feedbacks]').submit();
@@ -152,7 +160,7 @@ $('form[name=temp] input').each(function(){
 	if(this.id != ""& this.type!='submit' & this.id.indexOf('combined')<0)
 	{
 		var currentvalue =$('form[name=feedbacks] input#'+this.id).val();
-		var rating=parseInt(this.value)
+		var rating=parseInt(this.value);
 		var newvalue=currentvalue+','+rating;
 		$('form[name=feedbacks] input#'+this.id).val(newvalue);
 		var combined_id=this.id.replace('input-' ,'');
@@ -165,6 +173,7 @@ $('form[name=temp] input').each(function(){
  
 $('.star').rating('select',0); 
 $('#totvotes').html(votes);
+alert("Thanks for Voting!");
  
 });
 
@@ -181,7 +190,7 @@ $('#totvotes').html(votes);
 <div class='votedisplay'>
 	Total Votes : <span id='totvotes'>0</span>
 </div>
-<input name="next" id='feedbackNext'type="button"  class='btn btn-primary'value=" Next &gt;"/>
+<input name="next" id='feedbackNext'type="button"  class='btn btn-primary'value=" Record my Vote &gt;"/>
 
 
 <%= form_tag("#",name:'temp', method: "post") do %>
@@ -195,7 +204,7 @@ $('#totvotes').html(votes);
 <input type='hidden' id='input-<%=feedback_item.id%>'name='feed<%=feedback_item.id%>' value='0'>
 <input type='hidden' id='combined-<%=feedback_item.id%>'name='combined<%=feedback_item.id%>' value='0'>
 <%end%>
-<input id='feedbackSubmit'name="commit" type="submit"  class='btn btn-primary'value=" Finish " />
+<input id='feedbackSubmit'name="commit" type="submit"  class='btn btn-primary'value=" Finish the Session " />
 <%end%>
 </div>
 

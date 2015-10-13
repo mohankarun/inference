@@ -261,7 +261,7 @@ body
       -webkit-transform: translateZ( -100px ) rotateY(  -90deg );
          -moz-transform: translateZ( -100px ) rotateY(  -90deg );
            -o-transform: translateZ( -100px ) rotateY(  -90deg );
-              transform: translateZ( -100px ) rotateY(  90deg );
+              transform: translateZ( -100px ) rotateY(  -90deg );
     }
 
 

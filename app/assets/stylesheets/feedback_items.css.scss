@@ -14,7 +14,7 @@ border:1px solid black;
 .title{
 	padding: 20px;
 font-size: 40px;
-color: silver;
+color: #1B0719;
 text-shadow: 8px 8px 10px;
 }
 
@@ -151,7 +151,7 @@ width:50%;}
 
 input[type="submit"],#feedbackNext
 {
-  background: transparent;
+  background: white;
 height: 40px;
 border-radius: 5px;
 font-weight: bolder;
@@ -181,5 +181,17 @@ font-size:28px
 }
 
 .votedisplay{
-font-size: 14px;
+padding: 20px;
+    font-size: 20px;
+    background-color: #2EB740;
+    color: white;
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    -webkit-transition: all 600ms ease-in;
+  transition:         all 600ms ease-in; 
 }
+
+
+
+
